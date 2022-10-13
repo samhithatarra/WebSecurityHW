@@ -44,6 +44,7 @@ def do_payment(db, session):
         error = "Cannot pay self."
     
     else:
+
         sender.debit_coins(payment_amount)
         db.execute(
             "UPDATE users SET coins={} WHERE users.username='{}'".format(
